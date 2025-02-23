@@ -1,7 +1,11 @@
-def get_book_text():
-    print("loading....")
-    text = open("books\frankenstein.txt", "r")
-    print(text.read())
-    
+def main():
+    book = "books/frankenstein.txt"
+    text = get_book_text(book)
+    print(text)
 
 
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
+   
+main()
